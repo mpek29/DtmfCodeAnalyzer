@@ -23,7 +23,7 @@
 ## 📐 Signal Processing Approach
 | 🎵 Frequency Vector Representation | 🧮 Euclidean Projection | 🎛️ Filtering |
 |-----------|-----------|-----------|
-| <img src="assets/img/frequency_vectors.png" width="300" height="300"> | <img src="assets/img/euclidean_projection.png" width="300" height="300"> | <img src="assets/img/filtering.png" width="300" height="300"> |
+| <img src="assets/img/frequency_vectors.png"> | <img src="assets/img/euclidean_projection.png"> | <img src="assets/img/filtering.png"> |
 
 ## 🌟 License
 This project is open-source. Feel free to use, modify, and contribute! 🚀
