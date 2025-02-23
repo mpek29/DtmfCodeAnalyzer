@@ -1,6 +1,8 @@
 # DtmfCodeAnalyzer
 
 ## 🚀 Overview
+![Main Preview](assets/img/main.png)
+
 **DtmfCodeAnalyzer** is an open-source project designed to analyze and filter DTMF (Dual-Tone Multi-Frequency) signals used in conventional telephony. The project provides functionalities to detect and identify keypresses from audio recordings, as well as remove DTMF tones to isolate voice signals.
 
 ## 🎯 Purpose
