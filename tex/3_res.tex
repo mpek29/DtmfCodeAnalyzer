@@ -1,0 +1,32 @@
+\section{The Strategy for Solving the Problem}
+\subsection{Classic Approach}
+\subsubsection{Creating the Orthonormal Basis}
+The family of vectors (in this case, our sine functions are vectors belonging to the set of continuous functions on [0,1]) that allows us to create DTMF signals is free (as previously demonstrated). We are constrained to discretize each of these functions for analysis since they are of infinite size.
+
+\lstinputlisting[language=Python]{py/createOrthonormalBasis.py}
+
+\subsubsection{Retrieving the DTMF Code to Analyze}
+Next, we retrieve the DTMF code transmission that has been recorded for analysis.
+
+\lstinputlisting[language=Python]{py/getCodeFromFile.py}
+
+\subsubsection{Finding the Linear Combination that Created It}
+Then, we will find the linear combination that originated the emitted sound. To do this, we will perform an orthogonal projection of our sound onto the orthonormal basis created previously.
+
+\lstinputlisting[language=Python]{py/projectionOrt.py}
+
+To perform this orthogonal projection, we will compute the inner product of our sound with each vector in the basis.
+
+\lstinputlisting[language=Python]{py/scal.py}
+
+\lstinputlisting[language=Python]{py/integrale.py}
+
+\subsubsection{Identifying the Two Main Frequencies}
+To form a DTMF code, two sine waves of different frequencies are used. The goal here is to identify these two frequencies.
+
+\lstinputlisting[language=Python]{py/findingMainFrequencies.py}
+
+\subsubsection{Identifying the Associated Digit}
+Each combination of vectors is associated with a telephone digit. The question here is to determine which digit it is.
+
+\lstinputlisting[language=Python]{py/whatNumIsIt.py}

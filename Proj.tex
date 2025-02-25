@@ -1,0 +1,102 @@
+\documentclass[a4paper, twoside]{article} %document class
+%a4paper A4 page format
+
+%extensions
+\usepackage[utf8]{inputenc} %input encoding
+\usepackage[english]{babel}
+\usepackage{ae,lmodern}
+\usepackage[T1]{fontenc} %output encoding
+\usepackage{amsthm,amsmath,amsfonts,amssymb,mathtools} %math extensions
+\usepackage{graphicx} %image extension
+\usepackage{xcolor} %color extension
+\usepackage{hyperref}
+\usepackage[left=1.3cm, right=1.3cm, top=1.3cm, bottom=1.3cm]{geometry} %margins
+\usepackage{colortbl}
+\graphicspath{ {./img/} }
+\usepackage{float} %correct image placement
+
+\usepackage{listings} % Allows adding code
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+\lstset{
+        literate=
+        {à}{{\`a}}1
+        {é}{{\'e}}1
+        {è}{{\`e}}1
+        {ù}{{\`u}}1,
+        style=mystyle
+     }
+
+\begin{document}
+
+\begin{figure}[t]
+	\begin{minipage}[b]{0.2\linewidth}
+		\raggedright \includegraphics[scale=0.5]{enib.jpg}
+	\end{minipage}\hfill
+	\begin{minipage}[b]{0.4\linewidth}	
+		\raggedleft \includegraphics[scale=0.5]{logo.jpg}
+	\end{minipage}
+\end{figure}
+\begin{titlepage}
+\begin{center}
+ENIB S4: \\
+UE B - Euclidean Space\\
+\vspace{2cm}
+\huge{\textsl{DTMF Project}\textbf{ : \\
+Recognition of a DTMF code within an audio file}}\\
+\end{center}
+\begin{center}
+\rule{\linewidth}{1pt}
+\end{center}
+\begin{minipage}[t]{0.47\textwidth}
+	{\large DE MORAIS Theo}\\
+	{\large LE TALLEC NEGRIT Mael}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}\raggedleft
+	{\large PASCO Florian}\\
+	{\large WEBER SEGARRA Yann}
+\end{minipage}
+\vspace{2.5cm}
+\begin{figure}[H]
+	\centering \includegraphics[width=0.8\textwidth]{guardpage.jpg}
+\end{figure}
+\vspace{0.3cm}
+\centering{Version 1.5 : November 2, 2022}
+\end{titlepage}
+
+%displaying the table of contents
+\tableofcontents
+\listoffigures
+
+\newpage
+
+\input{tex/1_prob}     % part 1: Problem to solve;
+\newpage
+\input{tex/2_mod}     % part 2: Modeling the problem (mathematically);
+\newpage
+\input{tex/3_res}     % part 3: Solving the problem;
+\input{tex/4_otu}     % part 4: Technical tools used;
+
+\end{document}
